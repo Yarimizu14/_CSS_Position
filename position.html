@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    #layer1 {
+      width: 250px;
+      height: 30px;
+      position: relative;
+      border: solid 1px navy;
+    }
+    #layer1 .contents {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 20px;
+      left: 100px;
+      background-color: black;
+    }
+    #layer2 .contents {
+      width: 250px;
+      height: 30px;
+      background-color: red;
+    }
+    #layer3 .contents {
+      position: relative;
+      width: 250px;
+      height: 30px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="layer1" class="parent">
+    relative tag
+    <div class="contents"></div>
+  </div>
+  <div id="layer2">
+    <div class="contents">Normal flow :lower layer</div>
+  </div>
+  <div id="layer3">
+    <div class="contents">out of Normal flow :upper layer</div>
+  </div>
+</body>
+</html>
